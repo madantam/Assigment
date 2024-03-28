@@ -1,0 +1,53 @@
+Assignment :
+------------------
+Identify the attributes and behaviours of these class - University 
+
+      Attributes(properties)                Behaviors(Methods)
+
+      1)Students                             1)EnrollStudents()
+      2)Location                             2)GETlOCATION()
+      3)Department                           3)getfacultylist()
+      4)Ranking                              4)getcourses()
+      5)Faculty Members                      5)getalumninetwork()
+
+
+
+Identify the attributes and behaviours of these class - Bank
+      Attributes(properties)                Behaviors(Methods)
+
+      1)AccountholderName                  1)openAccount()
+      2)BankName                           2)closeAccount()
+      3)IFSCcode                           3)Deposit()
+      4)Address                            4)withdrawal()
+      5)AccountNumber                      5)transcation()
+      6)CIFNO                              6)Addemployee()
+      7)Accounts                           7)RemoveEmployee()
+      8)Employess                          8)updateInterestRate()
+      9)Transcations       
+
+Identify the attributes and behaviours of these class - Therate
+      Attributes(properties)                Behaviors(Methods)
+
+      1)name                                1)getticket()
+      2)seatno                              2)getseatno()
+      3)types of seating                    3)runtime()
+      4)therate types                       4)Intervaltime()
+      5)ticket                              5)ticketrate()
+      6)interval
+
+Identify the attributes and behaviours of these class - Radio
+      Attributes(properties)                Behaviors(Methods)
+
+      1)Frequency                            1)turnon()
+      2)Volume                               2)turnoff()
+      3)Antenna                              3)frequencyset()
+      4)model                                4)adjustvolume()
+      5)colour                               5)chargebattery()
+      6)Sound Quality
+      
+
+
+      
+             
+
+

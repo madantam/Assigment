@@ -1,0 +1,98 @@
+Assignment :
+---------------
+
+
+1.psvm with args :
+-----------------
+Example :
+--------------
+
+class Employee 
+{
+ public static void main(String args[])
+ {
+   System.out.println("Hello World");
+ }
+}
+
+
+Output :
+----------
+Succesfully compiled 
+
+output -- Hello World
+
+
+2.psvm without args:
+--------------------
+
+Example:
+----------
+class Employee 
+{
+ public static void main()
+ {
+   System.out.println("Hello World");
+ }
+}
+
+output :
+---------
+ error found in command prompt :
+-----------------------------------
+Main method not found in class Employee, please define the main method as:
+   public static void main(String[] args)
+
+
+
+3.spvm(args) :
+------------------
+
+Example :
+-----------
+
+class Employee 
+{
+ static public void main(String[] args)
+ {
+   System.out.println("Hello World");
+ }
+}
+
+Output :
+---------
+code succesfully complied --Hello World
+
+4.psm(args):
+------------
+
+Example :
+-----------
+
+class Employee 
+{
+ public static main(String[] args)
+ {
+   System.out.println("Hello World");
+ }
+}
+
+
+Output :
+-----------
+ invalid method declaration; return type required
+ public static main(String[] args)
+
+Note :
+-------
+1.The public static void main(String[] args) method plays a crucial role in Java programming. It serves as the entry point for any Java program and is the first method that gets executed when a Java application starts.
+
+
+
+
+
+
+
+
+
+

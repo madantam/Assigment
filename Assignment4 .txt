@@ -1,0 +1,99 @@
+Assignment4 :
+----------------
+When the for loop become Infinite :
+--------------------------------------
+Example Program to get Infinite Loop By using for loop :
+---------------------------------------------------------
+class infiniteLoop
+{
+  public static void main(String args[])
+  {
+    for(;;)
+     {
+       System.out.println("loop");
+     }
+}
+
+
+output :
+---------
+loop 
+loop
+loop
+loop
+:
+:
+: 
+infinite times
+
+
+example 2 :
+-------------
+
+for (i=0 ; i<1)
+{
+  System.out.print("hi);
+}
+
+output: 
+---------
+hi hi hi hi .......... infinite times 
+
+there are several examples for getting infinite loops
+
+Note : if the condition is contiously true ,untill then the loop will run so it will become infinite loop
+
+
+
+Nested Loop :
+-----------------
+A loop can be nested inside another looop 
+
+nested loop consisits of a outer loop and one or more inner loop .
+
+each time the outer loop is excuted then inner loop will executed again
+
+example :
+----------
+
+for( int i =0 ; i<=3 ; i++)
+{
+  for(int j =0 ; j<2 ; j++)
+  {
+     System.out.println(i + " " + j);
+  }
+   System.out.println()
+
+}
+
+Output :
+-----------
+ 0 0
+ 0 1
+
+1 0
+1 1
+
+2 0 
+2 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

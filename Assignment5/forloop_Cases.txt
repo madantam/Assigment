@@ -1,0 +1,46 @@
+Task :
+--------
+When the for loop become Infinite :
+--------------------------------------
+Example Program to get Infinite Loop By using for loop :
+---------------------------------------------------------
+class infiniteLoop
+{
+  public static void main(String args[])
+  {
+    for(;;)
+     {
+       System.out.println("loop");
+     }
+}
+
+
+output :
+---------
+loop 
+loop
+loop
+loop
+:
+:
+: 
+infinite times
+
+
+example 2 :
+-------------
+
+for (i=0 ; i<1)
+{
+  System.out.print("hi);
+}
+
+output: 
+---------
+hi hi hi hi .......... infinite times 
+
+there are several examples for getting infinite loops
+
+Note : if the condition is contiously true ,untill then the loop will run so it will become infinite loop
+
+

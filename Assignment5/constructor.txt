@@ -1,0 +1,75 @@
+
+
+/*
+Constructor:
+-----------
+Constructor used for intializing the object
+2 types:
+default Constructor :
+---------------------
+without the any arg is called default constructor
+
+Ex:
+---
+
+class Emp1
+{
+   String name;
+     int rno ;
+
+     Emp1()		//Constructor  be same as class name with no return type // Default Constructor defined outside the main class
+
+       {
+         name = "Madan Kumar";
+         rno  = 3560 ;
+       }
+
+  Emp1(String str ,int n)   // Parameterized Constructor with argumnets 
+  {
+    name = str ;
+    rno = n ;
+  }
+
+ public static void main(String args[])
+ {
+    Emp1 obj = new Emp1();
+    Emp1 employee  = new Emp1("Veera" , 2890) ;
+
+      System.out.println(obj.name);
+      System.out.println(obj.rno);
+ 
+          System.out.println(employee.name);
+              System.out.println(employee.rno);
+ 
+
+     
+          
+  }
+}
+
+Output :
+
+Madan Kumar
+3560
+Veera
+2890
+
+
+Output : by default the compiler will create the constrctor , if the user haven't created it
+note : if the user has crrated then the comipler will not create it 
+C:\java programs>javap Emp1
+Compiled from "Emp1.java"
+class Emp1 {
+  Emp1();
+  public static void main(java.lang.String[]);
+}
+*/
+
+
+
+/* 
+ Instance Variable : variable declared outside main method and default value assigned by compiler is zero
+  static variable  : variable declared with static keyword 
+
+
+*/

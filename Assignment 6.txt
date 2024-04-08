@@ -1,0 +1,90 @@
+Task 1 :
+===========
+
+
+1.By making the constructor private, you prevent other classes from directly instantiating objects of this class, 
+ ensuring that the Singleton pattern is enforced.
+
+Example :
+--------
+public class Singleton {
+    private static final Singleton instance = new Singleton();
+
+    // Private constructor to prevent instantiation from outside
+    private Singleton() {}
+
+    // Public method to access the Singleton instance
+    public static Singleton getInstance() {
+        return instance;
+    }
+}
+
+
+2. Utility classes, which contain only static methods and constants and are not meant to be instantiated, 
+ often have private constructors to prevent instantiation.
+
+Example :
+---------
+public class MathUtils {
+    // Private constructor to prevent instantiation
+    private MathUtils() {}
+
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    // Other static utility methods...
+}
+
+
+Task 2 :
+=============
+
+//can i make constr as final - impact
+
+Answer :Illegal modifier for the constructor in type ConstrEg2; only public, protected & private are permitted
+
+
+Task 3 :
+==========
+//if a keep int nearby constr - what happens 
+
+Answer : 2 Solutions   -- requires return type or change it to void
+
+Task 4 and 5 :
+===================
+////class emp, in main meth - if a craete 5 obj - it should print 5 as o/p
+//if u creat 3 obj - it  should print 3 obj
+
+
+program :
+===========
+class emp {
+    private static int count = 0; // static variable to count the number of objects
+
+    public emp() {
+        count++; // increment count every time a new object is created
+    }
+
+    // static method to get the count of objects created
+    public static int getCount() {
+        return count;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating 5 emp objects
+        emp a = new emp();
+        emp b = new emp();
+        emp c = new emp();
+        emp d = new emp();
+        emp e = new emp();
+
+        // Printing the count of objects created
+        System.out.println("Number of emp objects created: " + emp.getCount());
+    }
+}
+ Output :
+-------------
+Number of emp objects created: 5 

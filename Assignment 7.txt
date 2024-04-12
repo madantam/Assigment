@@ -1,0 +1,370 @@
+TASK :
+
+//what if my child class has lesser access modifier
+	// private void walk()
+
+class A{
+      
+    public A()
+    {
+      System.out.println("In A")
+    }
+}
+class B extends A
+  {
+    private void walk()
+     {
+       System.out.println("walking");
+      }
+    public void eat()
+     {
+       System.out.println("eating");
+      }
+}
+
+class Test
+{
+  public static void main(String args[])
+  {
+     B obj = new B():
+     
+      obj.eat(); // output : eating
+    
+     obj.walk();
+   // error : walk() has private access in B
+   // The method walk() from the type B is not visible
+      
+
+
+ 
+  
+
+
+
+
+
+
+3. Radio, Tv, Dvd Player - identify the Apt parent class and implement inheritance
+
+
+// These 3 are belongs to electronic devices , so i will take Electronicdevice as Parent for this
+
+public class ElectronicDevice
+{
+   private String brand ;
+   private String model ;
+   
+   public ElectronicDevice(String brand , String model)
+   {
+	   this.brand = brand ;
+	   this.model = model ;
+   }
+   public void displayInfo()
+   {
+	   System.out.println("Brand :" +brand);
+	   System.out.println("Model :"+model);
+	   
+   }
+}
+
+package eg.java.inheritance;
+
+public class Radio extends ElectronicDevice {
+	
+	private int frequency ;
+	
+	public Radio(String brand , String model , int frequency)
+	{
+		super(brand , model);
+		this.frequency =frequency ;
+		
+	}
+	
+	// method to display
+	public void displayInfo()
+	{
+		super.displayInfo(); // calls the parent displayInfo method
+		System.out.println("frequency :" + frequency);
+		
+	}
+
+}
+
+package eg.java.inheritance;
+
+public class DVDPlayer extends ElectronicDevice
+{
+    private boolean blueray ;
+    
+    public DVDPlayer(String brand , String model , boolean blueray)
+    {
+    	super(brand , model);
+    	this.blueray = blueray ;
+    	
+    }
+    
+    // Method to Display
+    public void displayInfo()
+    {
+    	super.displayInfo();
+    	System.out.println("Blueray :" +(blueray ? "Yes" : "No"));
+    }
+}
+package eg.java.inheritance;
+
+public class TV extends ElectronicDevice
+{
+   private String resolution ;
+   
+   public TV(String brand , String model , String resolution)
+   {
+	   super(brand , model);
+	   this.resolution = resolution ;
+	   
+	   
+   }
+   
+   public void displayinfo()
+   {
+	   super.displayInfo();
+	   System.out.println("Resolution :" +resolution);
+   }
+}
+package eg.java.inheritance;
+
+public class TestElectronics {
+
+	public static void main(String[] args) {
+		
+		TV t = new TV("Samsung" , "UFD x8129y4 " , "1080 * 720");
+		Radio rd = new Radio("Onida" , "Ra833332ojdc" , 220);
+		DVDPlayer dvd = new DVDPlayer("f&d", "lg" , true);
+		
+		t.displayinfo();
+		rd.displayInfo();
+		dvd.displayInfo();
+		
+	}
+
+}
+
+
+Output :
+===============
+
+Brand :Samsung
+Model :UFD x8129y4 
+Resolution :1080 * 720
+Brand :Onida
+Model :Ra833332ojdc
+frequency :220
+Brand :f&d
+Model :lg
+Blueray :Yes
+
+
+
+
+4. Admin, Manager, Finance - idetify the parent class and implement inheritance
+
+// Parent class
+class Employee {
+    private String name;
+    private int employeeId;
+
+    // Constructor
+    public Employee(String name, int employeeId) {
+        this.name = name;
+        this.employeeId = employeeId;
+    }
+
+    // Method to display employee information
+    public void displayInfo() {
+        System.out.println("Name: " + name);
+        System.out.println("Employee ID: " + employeeId);
+    }
+}
+
+// Child class 1: Admin
+class Admin extends Employee {
+    private String department;
+
+    // Constructor
+    public Admin(String name, int employeeId, String department) {
+        super(name, employeeId);
+        this.department = department;
+    }
+
+    // Method to display admin information
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Department: " + department);
+    }
+}
+
+// Child class 2: Manager
+class Manager extends Employee {
+    private int teamSize;
+
+    // Constructor
+    public Manager(String name, int employeeId, int teamSize) {
+        super(name, employeeId);
+        this.teamSize = teamSize;
+    }
+
+    // Method to display manager information
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Team Size: " + teamSize);
+    }
+}
+
+// Child class 3: Finance
+class Finance extends Employee {
+    private String specialization;
+
+    // Constructor
+    public Finance(String name, int employeeId, String specialization) {
+        super(name, employeeId);
+        this.specialization = specialization;
+    }
+
+    // Method to display finance information
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Specialization: " + specialization);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects of each type
+        Admin admin = new Admin("John Doe", 1001, "HR");
+        Manager manager = new Manager("Alice Smith", 1002, 10);
+        Finance finance = new Finance("Bob Johnson", 1003, "Accounting");
+
+        // Displaying information for each employee
+        admin.displayInfo();
+        manager.displayInfo();
+        finance.displayInfo();
+    }
+}
+
+
+2. Calc, scientific calc, programmer calc - implement complete inheritance(overriding,uniq methd...)
+
+   //Same as Example 3 here , Here Every Calculator has  number 1 to 9 common , Addition ,subtraction ,multiplication as Common and remaining are different
+
+Class Clac
+{
+}
+
+class ScienficCalc extends Clac
+{
+}
+class programmerCalc extends Clac
+{
+}
+
+class TestCalc
+{
+  public statuc void main(String args[])
+  {
+    ScienficCalc sc = new ScientificCalc();
+    programmerCalc  pc = new programmerCalc();
+
+   }
+}
+
+
+
+
+
+
+	
+this - this refers to currently used object
+
+
+class X{
+	private X() {
+		System.out.println("in x");
+	}
+}
+class Y extends X{
+	public Y() {	
+		//super()//by def
+		System.out.println("in Y");
+	}
+}
+
+public class ConstructorOrder1 {
+
+	public static void main(String[] args) {
+		Y ob=new Y();
+		
+	}
+}
+
+
+
+
+
+super()- constructor
+
+super - parent obj
+
+task :
+
+class A{
+	public void method1(){
+		sysout("hi");
+	}
+}
+
+class B extends A{
+	public void call(){
+	 super.method1();
+	}
+}
+class 
+	main
+		B ob=new B();
+		ob.call();
+	
+
+//super() - purpose
+
+
+
+class Employee{
+	employeeId
+	addr
+	empName
+	sal
+	public void work(){}
+	public void getSalary(){}
+}
+
+class Admin extends Employee{
+	
+
+}
+
+class Manager extends Employee{
+}
+
+
+main()
+
+	Admin ad=new Admin();
+	sysout(ad.employeeId)
+	
+
+task :
+
+	if i create 5 obj of Admin and manager in main methods class
+	it has to say 10 objects of employee created - once it shud be printing
